@@ -10,24 +10,20 @@
 
 </style>
 <script>
-function storeLogin() {
-  
-    localStorage.setItem('username', document.forms["login"]["username"].value);
-    localStorage.setItem('password', document.forms["login"]["password"].value);
-    localStorage.setItem('message', document.forms["login"]["message"].value);
- }
+
 function retrieveLogin() {
-    
+
     var username = localStorage.getItem('username');
     var password = localStorage.getItem('password');
     var newmessage = localStorage.getItem('message');
-/*
-    var username = document.forms["login"]["username"].value;
-    var password = document.forms["login"]["password"].value;
-    var newmessage = document.forms["login"]["message"].value;
-*/    
-    document.getElementById("identification").innerHTML = "Welcome " + username + " your password is " + password;
-    document.getElementById("newmessage").innerHTML = newmessage;
+
+    var usernameEntered = document.getElementById("username").value;
+    var passwordEntered = document.getElementById("password").value;
+
+    if( usernameEntered == username ) {
+        document.getElementById("identification").innerHTML = "Welcome " + username + ".";
+        document.getElementById("newmessage").innerHTML = newmessage;
+    }
 }
 </script>
 </head>
@@ -49,8 +45,7 @@ function retrieveLogin() {
                 <textarea id="message" name="user_message"></textarea>
             </li>
             <li class="button">
-                <button type="button" onclick="storeLogin()">Login</button>
-                <button type="button" onclick="retrieveLogin()">Retrieve</button>
+                <button type="button" onclick="retrieveLogin()">Login</button>
             </li>
         </ul>
     </form>
