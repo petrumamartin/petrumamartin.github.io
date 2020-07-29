@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create Account</title>
+<meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/form.css" />
+<style>
+
+</style>
+<script>
+function storeLogin() {
+  
+  localStorage.setItem('username', document.forms["login"]["username"].value);
+  localStorage.setItem('password', document.forms["login"]["password"].value);
+  localStorage.setItem('message', document.forms["login"]["message"].value);
+}
+function retrieveLogin() {
+
+var username = localStorage.getItem('username');
+var password = localStorage.getItem('password');
+var newmessage = localStorage.getItem('message');
+
+document.getElementById("identification").innerHTML = "Welcome " + username + " your password is " + password;
+document.getElementById("newmessage").innerHTML = newmessage;
+}
+</script>
+</head>
+<body>
+    <h1>Create Account</h1>
+    <h3><a href="index.html">Home</a></h3>
+    <h3><a href="login.html">Login</a></h3>
+    <form id="login">
+        <ul>
+            <li>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="user_name">
+            </li>
+            <li>
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password">
+            <li>
+                <label for="message">Message:</label>
+                <textarea id="message" name="user_message"></textarea>
+            </li>
+            <li class="button">
+                <button type="button" onclick="storeLogin()">Login</button>
+                <button type="button" onclick="retrieveLogin()">Retrieve</button>                
+            </li>
+        </ul>
+    </form>
+    <p id="identification"></p>
+    <p id="newmessage"></p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
