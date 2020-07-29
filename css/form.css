@@ -58,7 +58,8 @@ textarea {
 
 .button {
 	/* Align buttons with the text fields */
-	padding-left: 90px; /* same size as the label elements */
+    padding-left: 90px; /* same size as the label elements */
+
 }
 
 button {
@@ -66,4 +67,16 @@ button {
 	   between the labels and their text fields */
     margin-left: 0.5em;
     border-radius: 5px;
+    width: 100px;
+    height: 38px;
+    font-size: 1.1em;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+#identification, #newmessage {
+    font-size: 2em;
 }
