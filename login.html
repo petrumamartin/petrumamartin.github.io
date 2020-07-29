@@ -24,6 +24,10 @@ function retrieveLogin() {
         document.getElementById("identification").innerHTML = "Welcome " + username + ".";
         document.getElementById("newmessage").innerHTML = newmessage;
     }
+    else {
+        document.getElementById("identification").innerHTML = "Either your Username and/or your Password are not valid";
+        document.getElementById("newmessage").innerHTML = "";
+    }
 }
 </script>
 </head>
@@ -40,10 +44,6 @@ function retrieveLogin() {
             <li>
                 <label for="password">Password:</label>
                 <input type="text" id="password" name="password">
-            <li>
-                <label for="message">Message:</label>
-                <textarea id="message" name="user_message"></textarea>
-            </li>
             <li class="button">
                 <button type="button" onclick="retrieveLogin()">Login</button>
             </li>
