@@ -7,7 +7,9 @@
 <link rel="stylesheet" type="text/css" href="css/main.css" />
 <link rel="stylesheet" type="text/css" href="css/form.css" />
 <style>
-
+#loginDisplay {
+    visibility: hidden;
+}
 </style>
 <script>
 
@@ -20,9 +22,10 @@ function retrieveLogin() {
     var usernameEntered = document.getElementById("username").value;
     var passwordEntered = document.getElementById("password").value;
 
-    if( usernameEntered == username ) {
+    if( usernameEntered == username && passwordEntered == password ) {
         document.getElementById("identification").innerHTML = "Welcome " + username + ".";
         document.getElementById("newmessage").innerHTML = newmessage;
+        document.getElementById("loginDisplay").style.visibility = "visible";
     }
     else {
         document.getElementById("identification").innerHTML = "Either your Username and/or your Password are not valid";
@@ -34,7 +37,7 @@ function retrieveLogin() {
 
 <body>
     <h1>Login Page</h1>
-    <h3><a href="index.html">Home</a></h3>
+    <h3 id="loginDisplay"><a href="welcome.html">Home</a></h3>
     <form id="login">
         <ul>
             <li>
