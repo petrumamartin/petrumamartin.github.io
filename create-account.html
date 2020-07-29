@@ -15,6 +15,7 @@ function storeLogin() {
   localStorage.setItem('username', document.forms["login"]["username"].value);
   localStorage.setItem('password', document.forms["login"]["password"].value);
   localStorage.setItem('message', document.forms["login"]["message"].value);
+  retrieveLogin();
 }
 function retrieveLogin() {
 
@@ -45,8 +46,7 @@ document.getElementById("newmessage").innerHTML = newmessage;
                 <textarea id="message" name="user_message"></textarea>
             </li>
             <li class="button">
-                <button type="button" onclick="storeLogin()">Login</button>
-                <button type="button" onclick="retrieveLogin()">Retrieve</button>                
+                <button type="button" onclick="storeLogin()">Create</button>
             </li>
         </ul>
     </form>
