@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 
 
-	$("#return-link").html("<a href='red.html'><p>Return</p></a>");//.css({"color":"yellow","text-decoration":"none"});
+	$("#return-link").html("<a href='../welcome.html'><p>Return</p></a>");//.css({"color":"yellow","text-decoration":"none"});
 	$("#return-link a").css({
 		"color":"white",
 		"text-decoration":"none",
