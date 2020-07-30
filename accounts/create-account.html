@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create Account</title>
+<meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="..\scripts\create-account.js"></script>
+<link rel="stylesheet" type="text/css" href="..\css\main.css" />
+<link rel="stylesheet" type="text/css" href="..\css\form.css" />
+<style>
+#recovery {
+    font-size: 1.2em;
+    margin-top: 50px;
+}
+</style>
+<script>
+
+</script>
+</head>
+<body>
+    <h1>Create Account</h1>
+    <h3><a href="login.html">Login</a></h3>
+    <form id="login">
+        <ul>
+            <li>
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="first-name" />
+            </li>
+            <li>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="user-name" />
+            </li>
+            <li>
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password" />
+            </li>
+            <li>
+                <p id="recovery">Password Recovery</p>
+                <p>What is your favourite colour?</p>
+                <label for="hint">Answer:</label>
+                <input type="text" id="hint" name="hint" />
+            </li>
+            <li class="button">
+                <button type="button" onclick="storeLogin()">Create</button>
+            </li>
+        </ul>
+    </form>
+    <p id="identification"></p>
+    <p id="newmessage"></p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
