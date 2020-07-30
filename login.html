@@ -4,11 +4,17 @@
 <title>Login Page</title>
 <meta name="viewport" content="width=device-width">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/main.css" />
-<link rel="stylesheet" type="text/css" href="css/form.css" />
+<link rel="stylesheet" type="text/css" href="..\css\main.css" />
+<link rel="stylesheet" type="text/css" href="..\css\form.css" />
 <style>
 #loginDisplay {
     visibility: hidden;
+}
+span {
+    margin-left: 15px;
+}
+#forgot a {
+    color: white;
 }
 </style>
 <script>
@@ -30,6 +36,7 @@ function retrieveLogin() {
     else {
         document.getElementById("identification").innerHTML = "Either your Username and/or your Password are not valid";
         document.getElementById("newmessage").innerHTML = "";
+        document.getElementById("loginDisplay").style.visibility = "hidden";
     }
 }
 </script>
@@ -49,6 +56,7 @@ function retrieveLogin() {
                 <input type="text" id="password" name="password">
             <li class="button">
                 <button type="button" onclick="retrieveLogin()">Login</button>
+                <p id="forgot"><a href="hint.html">Forgot your username or password</a></p>
             </li>
         </ul>
     </form>
