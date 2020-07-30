@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Boolean Gate</title>
+<link rel="stylesheet" type="text/css" href="..\css\main.css" />
+<style>
+canvas {
+    background-color: white;
+}
+p {
+    margin: 0px;
+    padding: 0px;
+}
+</style>
+<script>
+class Step {
+	evalStep(x, y, z) {
+		if ( x > 5 && y > 5 && z > 5 )
+			return "&#128512;";
+	}
+}
+</script>
+</head>
+<body onload="move()">
+<h1>Walking Animation for Steps</h1>
+<h3><a href="walk-main.html">Walking</a> Main Page</h3>
+
+
+<canvas id="path" width="400" height="300" style="border: 1px solid black"></canvas>
+
+<p id="colour">&nbsp;</p>
+<p id="movement" style="font-size:64px;"></p>
+
+<script>
+
+var step = new Step();
+function move() {
+	document.getElementById("movement").innerHTML = step.evalStep(6, 9, 8);
+	makeStep(0);
+}
+
+var num01 = 0;
+var flagOne = true;
+setInterval(setColour, 1000);
+function setColour() {
+	if ( num01 % 2 ) flagOne = true;
+	else flagOne = false;
+	num01++;
+	word(flagOne, "Hello");
+}
+
+function word(w, s) {
+	if ( w == false ) document.getElementById("colour").innerHTML = "RED" + " " + s;
+	if ( w == true ) document.getElementById("colour").innerHTML = "BLUE" + " " + s;
+	
+}
+var a = 120, b = 0;
+var num = 2;
+setInterval( makeStep, 1250 );
+
+function makeStep() {
+	if ( num % 2 == 0 ) a = 120;
+	if ( num % 2 != 0 ) a = 220;
+	num++;
+	stepping( a );
+}
+
+function stepping( a ) {
+	var c = document.getElementById( "path" );
+	var ctx = c.getContext( "2d" );
+	
+	ctx.beginPath();
+	ctx.fillStyle = "rgb( 255, 255, 255 )";
+	ctx.fillRect( b - 41, 79, b + 41, 160 );
+
+	ctx.beginPath();
+	ctx.arc( a, 120, 40, 0, 2 * Math.PI );
+	ctx.fillStyle = "rgb( 255, 0, 0 )";
+	ctx.fill();
+	ctx.stroke();
+
+	b = a;
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
