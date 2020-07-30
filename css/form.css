@@ -1,7 +1,7 @@
 form {
 	/* Center the form on the page */
 	margin: 0 auto;
-	width: 400px;
+	width: 500px;
 	/* Form outline */
 	padding: 1em;
 	border: 1px solid #CCC;
@@ -80,4 +80,8 @@ h1 {
 
 #identification, #newmessage {
     font-size: 2em;
+}
+
+#forgot a {
+	color: white;
 }
