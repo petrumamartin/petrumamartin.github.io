@@ -1,15 +1,27 @@
 $(document).ready(function(){
-/*
-	var list = $("#old-list").html();
-	$("#new-list").append(list);
 
-	$("#new-list").css({"background-color":"rgba(200,10,150,0.5)"});
-*/
 	var menuBar = "<ul></ul>";
 	$("nav").append(menuBar);
 
-	var menu = [ "Statement", "Edit", "Refactor", "Format", "View", "News", "Help" ];
-	var links = [ "statement.html", "yellow.html", "blue.html", "orange.html", "green.html", "salmon.html", "purple.html" ];
+	var menu = [ "Statement",
+				 "Edit",
+				 "Refactor", 
+				 "Format", 
+				 "View", 
+				 "News", 
+				 "Home" 
+				];
+
+	var links = [ "statement.html", 
+				  "yellow.html", 
+				  "blue.html", 
+				  "orange.html", 
+				  "green.html", 
+				  "salmon.html", 
+				  "../welcome.html" 
+				];
+
+
 	for(var i = 0; i < menu.length; i++){
 		$("nav ul").append("<a href=" + links[i] + "><li class='menu'>" + menu[i] + "</li></a>");
 	}
@@ -25,19 +37,12 @@ $(document).ready(function(){
 	});
 
 
-
-
 	$("#return-link").html("<a href='../welcome.html'><p>Return</p></a>");
 	$("#return-link a").css({
 		"color":"white",
 		"text-decoration":"none",
 		"font-size": "3em"
 	});
-
-
-
-
-
 
 
 });
