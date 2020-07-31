@@ -4,7 +4,7 @@
 <title>Create Account</title>
 <meta name="viewport" content="width=device-width">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="..\scripts\create-account.js"></script>
+<script src="..\scripts\account.js"></script>
 <link rel="stylesheet" type="text/css" href="..\css\main.css" />
 <link rel="stylesheet" type="text/css" href="..\css\form.css" />
 <style>
@@ -20,7 +20,7 @@
 <body>
     <h1>Create Account</h1>
     <h3><a href="login.html">Login</a></h3>
-    <form id="login">
+    <form id="form-account">
         <ul>
             <li>
                 <label for="firstname">First Name:</label>
@@ -41,7 +41,7 @@
                 <input type="text" id="hint" name="hint" />
             </li>
             <li class="button">
-                <button type="button" onclick="storeLogin()">Create</button>
+                <button type="button" onclick="createAccount()">Create</button>
             </li>
         </ul>
     </form>
