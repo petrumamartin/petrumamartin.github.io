@@ -1,14 +1,18 @@
+html {
+	font-family: 'Calibri Light';
+	font-size: 1.4em;
+}
 form {
 	/* Center the form on the page */
 	margin: 0 auto;
 	width: 500px;
 	/* Form outline */
-	padding: 1em;
+	padding: 1.3em;
 	border: 1px solid #CCC;
     border-radius: 1em;
     background-color: rgb(80, 80, 240); /* rgba(230, 230, 250,.2);*/
     color: white;
-    font-size: 1.1em;
+    /*font-size: 1.1em;*/
 }
 
 ul {
@@ -24,7 +28,7 @@ form li + li {
 label {
 	/* Uniform size & alignment */
 	display: inline-block;
-	width: 90px;
+	width: 110px;
 	text-align: right;
 }
 
@@ -66,9 +70,9 @@ textarea {
 button {
 	/* This exta margin represent roughly the same space as the space 
 	   between the labels and their text fields */
-    margin-left: 0.5em;
+    margin-left: 1.1em;
     border-radius: 5px;
-    width: 100px;
+    width: 110px;
     height: 38px;
     font-size: 1.1em;
 }
