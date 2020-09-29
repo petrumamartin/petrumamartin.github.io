@@ -7,6 +7,15 @@
 <link rel="stylesheet" type="text/css" href="..\css\main.css" />
 <link rel="stylesheet" type="text/css" href="..\css\form.css" />
 <style>
+.align-input {
+    display: block;
+    position: relative;
+    margin: 18px 0px;
+}
+.align-input input {
+    position: absolute;
+    left: 150px;
+}
 #loginDisplay {
     visibility: hidden;
 }
@@ -46,19 +55,13 @@ function retrieveLogin() {
     <h1>Login Page</h1>
     <h3 id="loginDisplay"><a href="welcome.html">Home</a></h3>
     <form id="login">
-        <ul>
-            <li>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="user_name">
-            </li>
-            <li>
-                <label for="password">Password:</label>
-                <input type="text" id="password" name="password">
-            <li class="button">
-                <button type="button" onclick="retrieveLogin()">Login</button>
-                <p id="forgot"><a href="hint.html">Forgot your username or password</a></p>
-            </li>
-        </ul>
+        <label for="username" class="align-input">Username:
+            <input type="text" id="username" name="username">
+        </label>
+        <label for="password" class="align-input">Password:
+            <input type="text" id="password" name="password">
+        </label>
+        <button type="button" onclick="retrieveLogin()">Login</button>
     </form>
     <p id="identification"></p>
     <p id="newmessage"></p>
