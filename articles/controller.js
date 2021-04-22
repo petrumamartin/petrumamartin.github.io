@@ -3,7 +3,8 @@ $(document).ready(function(){
 	var menuBar = "<ul></ul>";
 	$("nav").append(menuBar);
 
-	var menu = [ "Statement",
+	var menu = [ 
+				 "Statement",
 				 "Edit",
 				 "Refactor", 
 				 "Format", 
@@ -12,11 +13,12 @@ $(document).ready(function(){
 				 "Home" 
 				];
 
-	var links = [ "statement.html", 
-				  "yellow.html", 
-				  "blue.html", 
-				  "orange.html", 
-				  "green.html", 
+	var links = [ 
+				  "statement.html", 
+				  "wheat.html", 
+				  "powderblue.html", 
+				  "tomato.html", 
+				  "forestgreen.html", 
 				  "salmon.html", 
 				  "../welcome.html" 
 				];
