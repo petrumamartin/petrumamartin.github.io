@@ -34,9 +34,9 @@ function retrieveLogin() {
   var passwordEntered = document.getElementById("password").value;
 
   if( usernameEntered == username && passwordEntered == password ) {
+      accountValid = true;
       document.getElementById("identification").innerHTML = "Welcome " + firstname + ".";
       document.getElementById("loginDisplay").style.visibility = "visible";
-      accountValid = true;
   }
   else {
       document.getElementById("identification").innerHTML = "The Username or Password is not valid<br />Try using the Hint";
