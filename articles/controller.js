@@ -20,7 +20,7 @@ $(document).ready(function(){
 				  "tomato.html", 
 				  "forestgreen.html", 
 				  "salmon.html", 
-				  "../welcome.html" 
+				  "../index.html" 
 				];
 
 
