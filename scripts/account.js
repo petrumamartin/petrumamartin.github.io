@@ -37,9 +37,10 @@ function retrieveLogin() {
       document.getElementById("loginDisplay").style.visibility = "visible";
   }
   else {
-      document.getElementById("identification").innerHTML = "Either your Username and/or your Password are not valid";
+      document.getElementById("identification").innerHTML = "The Username or Password is not valid<br />Try using the Hint";
       document.getElementById("newmessage").innerHTML = "";
       document.getElementById("loginDisplay").style.visibility = "hidden";
+      document.getElementById("hint").style.visibility = "visible";
   }
 }
 
