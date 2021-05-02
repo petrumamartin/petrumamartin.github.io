@@ -23,6 +23,11 @@
 button {
     margin-left: 130px;
 }
+a#hint{
+    visibility: hidden;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+}
 </style>
 <script>
 
@@ -31,7 +36,7 @@ button {
 
 <body>
     <h1>Login Page</h1>
-    <h3 id="loginDisplay"><a href="..\welcome.html">Home</a></h3>
+    <h3 id="loginDisplay"><a href="..\index.html">Home</a></h3>
     <form id="form-login">
         <label for="username" class="align-input">Username:
             <input type="text" id="username" name="username">
@@ -40,6 +45,7 @@ button {
             <input type="text" id="password" name="password">
         </label>
             <button type="button" onclick="retrieveLogin()">Login</button>
+            <a href="hint.html" id="hint">Hint</a>
     </form>
     <p id="identification"></p>
     <p id="newmessage"></p>
