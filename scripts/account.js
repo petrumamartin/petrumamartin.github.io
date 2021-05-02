@@ -1,6 +1,8 @@
 /*
   Create an account and display the results
 */
+var accountValid = false;
+
 function createAccount() {
     
     localStorage.setItem( 'firstname', document.forms["form-account"]["firstname"].value);
@@ -34,6 +36,7 @@ function retrieveLogin() {
   if( usernameEntered == username && passwordEntered == password ) {
       document.getElementById("identification").innerHTML = "Welcome " + firstname + ".";
       document.getElementById("loginDisplay").style.visibility = "visible";
+      accountValid = true;
   }
   else {
       document.getElementById("identification").innerHTML = "The Username or Password is not valid<br />Try using the Hint";
