@@ -60,7 +60,7 @@ $(document).ready(function(){
 	/*==========     return link     ==========*/
 	var returnHome = "<div id='return-link'></div>";
 	$("body").append(returnHome);
-	$("#return-link").html("<a href='../welcome.html'><p>Return</p></a>");
+	$("#return-link").html("<a href='../index.html'><p>Return</p></a>");
 	$("#return-link a").css({
 		"color":"white",
 		"text-decoration":"none",
