@@ -33,7 +33,6 @@ function retrieveLogin() {
 
   if( usernameEntered == username && passwordEntered == password ) {
       document.getElementById("identification").innerHTML = "Welcome " + firstname + ".";
-      //document.getElementById("newmessage").innerHTML = newmessage;
       document.getElementById("loginDisplay").style.visibility = "visible";
   }
   else {
