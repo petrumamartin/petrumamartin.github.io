@@ -4,6 +4,7 @@
 <title>Welcome</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="main.css">
+<script src="scripts\account.js"></script>
 <style>
 h1 {
 	text-align: center;
@@ -20,8 +21,13 @@ h1 {
 	font-size: 1.2em;
 }
 .pointer {cursor: pointer;}
-</style>
 
+</style>
+<script>
+	$(document).ready(function(){
+		if(accountValid) $("#secret").css({"color":"red"});
+	});
+</script>
 </head>
 <body>
 <div id="main">
@@ -35,7 +41,7 @@ h1 {
 		<a href=""><li class="menu">Mathematics</li></a>
 		<a href=""><li class="menu">Physics</li></li></a>
 		<a href="science\science.html"><li class="menu">Science</li></a>
-		<a href=""><li class="menu">Empty</li></a>
+		<a href="secret\secret.html"><li class="menu" id="secret">Secret</li></a>
 		<a href=""><li class="menu">Software</li></a>
 		<span><a><li id="file" class="menu pointer">Help</li></a></span>
 	</ul>
