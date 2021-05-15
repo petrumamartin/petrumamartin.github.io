@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 	var menu = [ 
 				 "Statement",
-				 "Edit",
+				 "Sketches",
 				 "Refactor", 
 				 "Format", 
 				 "View", 
@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 	var links = [ 
 				  "statement.html", 
-				  "wheat.html", 
+				  "sketches.html", 
 				  "powderblue.html", 
 				  "tomato.html", 
 				  "forestgreen.html", 
