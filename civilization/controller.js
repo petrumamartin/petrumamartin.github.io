@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
 	/*==========     global variables     ==========*/
-	var pages = [ "civilization.html", "communication.html", "education.html", "government.html", "orange.html", "green.html", "salmon.html", "purple.html" ];
+	var pages = [ "civilization.html", "communication.html", "education.html", "government.html", "orange.html", "green.html", "salmon.html","purple.html" ];
 	var subjects = [ "Civilization", "Communication", "Education", "Government", "Orange", "Green", "Salmon", "Purple" ];
 
 	$("body").css({
@@ -60,15 +60,21 @@ $(document).ready(function(){
 	/*==========     return link     ==========*/
 	var returnHome = "<div id='return-link'></div>";
 	$("body").append(returnHome);
-	$("#return-link").html("<a href='../index.html'><p>Return</p></a>");
-	$("#return-link a").css({
+	if($("title").html() === "Civilization") {
+		$("#return-link").html("<a href='../index.html'><p>E.T. go Home</p></a>");
+
+		
+	}
+	else {
+		$("#return-link").html("<a href='civilization.html'><p>Return to Civilization</p></a>");
+		$("#return-link a").css({
 		"color":"white",
 		"text-decoration":"none",
 		"font-size": "3em"
+		
 	});
-
-
-
+}
+/*==========     civilization     ==========*/
 
 
 
