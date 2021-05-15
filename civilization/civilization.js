@@ -20,7 +20,7 @@ $("#return-link a").css({
     "<p>" + 
       "What is <cite>civilization</cite>?<sup>[1]</sup>  So " + 
       "Why do humans build civilization?  " + 
-      "There are many reasons, peace, comfort, easy of living etc., " + 
+      "There are many reasons, peace, comfort, ease of living etc., " + 
       "but the purpose of civilization may simply the facination with " + 
       "what humans can do with civilization.  "
     "</p>" + 
