@@ -9,7 +9,7 @@ purpose: provide a forum for reviewing books.
 
 <html lang="en-CA">
 <head>
-	<title>Powder Blue</title>
+	<title>Collection of Book Reviews</title>
 	<meta charset="UTF-8" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -18,7 +18,19 @@ purpose: provide a forum for reviewing books.
 	<link href="..\css\articles-main.css" rel="stylesheet" />
 	<script src="controller.js"></script>
 <style>
-body {background-color: powderblue; }
+html {background-color: powderblue; }
+body {background-color: snow; }
+#main {text-decoration-line: none;font-size: 1.2em;}
+
+#bookreviews {font-size: 1.2em; }
+#bookreviews a {text-decoration-line: none;}
+#bookreviews a:link {color:fuchsia;}
+#bookreviews a:visited{color: green;}
+#bookreviews a:hover {color: red;}
+
+.separator {color:indigo;}
+
+
 </style>
 <script>
 
@@ -26,9 +38,14 @@ body {background-color: powderblue; }
 </head>
 <body>
 <nav></nav>
-<h1>Powder Blue</h1>
-<a href="super.html">Home</a>
+<h1>Book Reviews</h1>
+<a id="main" href="super.html">Home</a>
 
+<h2>Book Reviews</h2>
+<ul id="bookreviews">
+	<li><a href="book-reviews\earth_emile-zola.html">Earth <span class="separator">by</span> &Eacute;mile Zola</a></li>
+	<li><a href="book-reviews\east-of-eden_john-steinbeck.html">East of Eden <span class="separator">by</span> John Steinbeck</a></li>
+</ul>
 
 </body>
 </html>
