@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bread and Wine by Ignazio Silone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="main-grid.css" />
+
+  <style>
+              /*    main grid layout requirements   */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    [class*="col-"] {
+      float: left;
+      padding: 15px;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+        /*    general styling   */
+    html {
+      font-family: "Lucida Sans", sans-serif;
+    }
+    .header {
+      background-color: rgb(153, 51, 204);
+      color: rgb( 255, 255, 255);
+      padding: 15px;
+    }
+    .menu ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+    }
+    .menu li {
+      padding: 8px;
+      margin-bottom: 7px;
+      background-color: rgb( 51, 181, 229 );
+      color: rgb( 255, 255, 255 );
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    .menu li:hover {
+      background-color: rgb( 0, 153, 204 );
+    }
+    .menu ul a {
+      text-decoration-line: none;
+    }
+
+    .aside {
+      background-color: rgb( 51, 181, 229 );
+      padding: 15px;
+      color: rgb( 255, 255, 255 );
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+
+    .footer {
+      background-color: rgb(0, 153, 204);
+      color: rgb(255,255,255);
+      text-align: center;
+      font-size: 12px;
+      padding: 15px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="header">
+    <h1>Book Review for Bread and Wind by Ignazio Silone</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-2 col-s-2 menu">
+      <ul>
+        <a href="..\book-reviews.html"><li>Book Reviews</li></a>
+        <a href="..\..\index.html"><li>Home</li></a>
+      </ul>
+    </div>
+
+    <div class="col-4 col-s-5">
+      <h2>Bread and Wine by Ignazio Silone</h2>
+      <p>
+        There is from the beginning a collage of characters held together by a political revolutionary on the lamb from the authorities.  Each person that Pietra Spina who now disguised as Don Paolo Spana a priest encounter his fa&ccedil;ade of appearances in different ways.  
+      </p>
+    </div>
+    <div class="col-4 col-s-5">
+      <p>
+        The book achieves a short story as the novel. 
+      </p>
+    </div>
+
+    <div class="col-2 col-s-12">
+      <div class="aside">
+        <p>Synopsis</p>
+        <p>Criticism</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>A complete collection of book reviews</p>
+  </div>
+
+</body>
+</html>
