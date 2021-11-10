@@ -17,7 +17,31 @@ purpose: book review for East of Eden by John Stienbeck
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link href="" rel="stylesheet" />
 <style>
-
+div.report p.paragraph {
+	margin-top: 0px;
+	text-indent: 20px;
+	text-align: justify;
+	font-family:'Trebuchet MS', Arial, sans-serif;
+	letter-spacing: 0.5px;
+	word-spacing: 1px;
+	line-height: 22px;
+}
+.report .book-title {
+	column-span: all;
+}
+.report {
+	column-count: 3;
+	column-width: 400px;
+	column-gap: 50px;
+	column-rule: 1px solid lightgrey;
+}
+.button {
+	width: 100px;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-image: linear-gradient(to top, grey, white);
+}
 </style>
 <script>
 
@@ -26,7 +50,21 @@ purpose: book review for East of Eden by John Stienbeck
 <body>
 
 <h1>Book Review for East of Eden by John Steinbeck</h1>
+<div class="button"></div>
 <a href="..\book-reviews.html">Home</a>
+	
+<div class="report">
+	<h2 class="book-title">East of Eden by John Steinbeck</h2>
+	<p class="paragraph">
+		There is a constant theme of alienation, where the main characters are confronted with the realization they are alone.  The principle is that East of Eden may be indicating there is a destination, a location, a place, "east of eden", the relocation of people, the separation of people from what makes up their lives, family.  The examination of how family and the interaction of the components of family which build up a character.  Where the dislocation from all roots, from ties a departure from the simple life of family oriented societies to one where mobility for the variety of reasons, especially economics leads people and these characters especially away from all ties to their families.  The departure of people, and often never to return, the separation of family members.
+	</p>
+	<p class="paragraph">
+		What America was facing especially during the early stages of the twentieth century was relocation, where the effects of their expansion policies after the Civil War lead Americans to explore western frontiers.  The theme of alienation could be felt from the very beginning with the Trask patriach whose disappearance to the hallowed halls of Washington and his boys Charles and Adam left on their own.  
+	</p>
+	<p class="paragraph">
+		The quest for something by leaving and settling far away from family is a theme where even the patriach of the Hamiltons' had left from Ireland all ties to family and home forever builds the theme.  
+	</p>
+</div>
 
 </body>
 </html>
