@@ -61,7 +61,7 @@ $(document).ready(function(){
 	var returnHome = "<div id='return-link'></div>";
 	$("body").append(returnHome);
 	if($("title").html() === "Civilization") {
-		$("#return-link").html("<a href='../index.html'><p>E.T. go Home</p></a>");
+		$("#return-link").html("<a href='../index.html'><p>E.T. phone Home</p></a>");
 
 		
 	}
