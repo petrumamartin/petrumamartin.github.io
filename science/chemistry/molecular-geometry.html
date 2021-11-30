@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<!--
+author:		Peter A. Martin
+name:		molecular-geometry.html
+date:		Monday, November 29, 2021
+purpose: 	display key molecular geometries
+-->
+
+<html lang="en-CA">
+<head>
+	<title>Molecular Geometry</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="main.css" rel="stylesheet" />
+<style>
+
+</style>
+<script>
+function main() {
+	draw();
+}
+function draw() {
+	const canvas = document.getElementById('canvas');
+	const ctx = canvas.getContext('2d');
+
+	ctx.fillStyle = 'cornflowerblue';
+	ctx.beginPath();
+	ctx.arc(150, 150, 10, 0, Math.PI * 2, false);
+	ctx.fill();
+	ctx.closePath();
+	ctx.fillStyle = 'firebrick';
+	ctx.beginPath();
+	ctx.arc(100, 180, 10, 0, Math.PI * 2, false);
+	ctx.fill();
+	ctx.closePath();
+	ctx.beginPath();
+	ctx.arc(200, 180, 10, 0, Math.PI * 2, false);
+	ctx.fill();
+	ctx.closePath();
+
+	ctx.fillStyle = 'black';
+	ctx.beginPath();
+	ctx.moveTo(108, 175);
+	ctx.lineTo(142, 155);
+	ctx.stroke();
+	ctx.closePath();
+	ctx.beginPath();
+	ctx.moveTo(157, 156);
+	ctx.lineTo(195, 175);
+	ctx.stroke();
+	ctx.closePath();
+
+}
+</script>
+</head>
+<body onload="main();">
+<a href="chemistry.html">Back to Chemistry</a>
+<h1>Molecular Geometry</h1>
+
+<canvas id="canvas" width="500" height="500"></canvas>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
