@@ -15,46 +15,13 @@ purpose: 	display key molecular geometries
 	<meta name="keywords" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link href="main.css" rel="stylesheet" />
+	<script src="molecular-geometry.js"></script>
+	<link href="" rel="stylesheet" />
 <style>
 
 </style>
 <script>
-function main() {
-	draw();
-}
-function draw() {
-	const canvas = document.getElementById('canvas');
-	const ctx = canvas.getContext('2d');
 
-	ctx.fillStyle = 'cornflowerblue';
-	ctx.beginPath();
-	ctx.arc(150, 150, 10, 0, Math.PI * 2, false);
-	ctx.fill();
-	ctx.closePath();
-	ctx.fillStyle = 'firebrick';
-	ctx.beginPath();
-	ctx.arc(100, 180, 10, 0, Math.PI * 2, false);
-	ctx.fill();
-	ctx.closePath();
-	ctx.beginPath();
-	ctx.arc(200, 180, 10, 0, Math.PI * 2, false);
-	ctx.fill();
-	ctx.closePath();
-
-	ctx.fillStyle = 'black';
-	ctx.beginPath();
-	ctx.moveTo(108, 175);
-	ctx.lineTo(142, 155);
-	ctx.stroke();
-	ctx.closePath();
-	ctx.beginPath();
-	ctx.moveTo(157, 156);
-	ctx.lineTo(195, 175);
-	ctx.stroke();
-	ctx.closePath();
-
-}
 </script>
 </head>
 <body onload="main();">
