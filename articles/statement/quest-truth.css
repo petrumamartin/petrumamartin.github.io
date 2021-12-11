@@ -1,0 +1,50 @@
+html {
+	margin: 100px 150px;
+	background-color: black;
+	color: white;
+	width: 1000px;
+
+}
+body {
+	height: 500px;
+	padding: 50px;
+	border: 5px outset slategray;
+	border-radius: 20px;
+}
+h1 {
+	font-family: harrington;
+}
+
+p {
+	font-family: 'calibri light';
+	font-size: 14pt;
+	text-indent: 15px;
+}
+
+a {
+	color: lemonchiffon;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
