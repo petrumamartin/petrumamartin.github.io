@@ -7,7 +7,7 @@ $(document).ready(function(){
 				 "Statement",
 				 "Sketches",
 				 "Book Reviews", 
-				 "Format", 
+				 "Stories", 
 				 "View", 
 				 "News", 
 				 "Home" 
@@ -17,7 +17,7 @@ $(document).ready(function(){
 				  "statement.html", 
 				  "sketches.html", 
 				  "book-reviews.html", 
-				  "tomato.html", 
+				  "stories.html", 
 				  "forestgreen.html", 
 				  "salmon.html", 
 				  "../index.html" 
