@@ -35,7 +35,7 @@ $(document).ready(function(){
 		"padding-left": "15px",
 		"margin-right": "10px",
 		"border": "solid black 2px",
-		"width": "80px"
+		"width": "110px"
 	});
 
 
