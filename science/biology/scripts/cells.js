@@ -1,81 +1,61 @@
 /*
-name: cells.js
-date: Tuesday, December 14, 2021
+author:   Peter A. Martin
+name:     cells.js
+date:     Thursday, December 16, 2021
+purpose:  class library for cell properties and behaviours
 */
 
-const canvas = document.getElementById("myCanvas");
-const context = canvas.getContext("2d");
-
 function main() {
-  draw();
+  let nucleolus = new Nucleolus();
+  let chromatin = new Chromatin(new Point(205, 220), new Point(220, 200), new Point(230, 230), "rebeccapurple");
 }
 
-function draw() {
-  createCell();
-}
-function createCell() {
-  canvasText(new Point(200, 75), "Animal Cell", "black");
-  cellMembrane();
-  nucleus();
-  canvasText(new Point(600, 75), "Plant Cell", "black");
-  cellMembrane();
-  nucleus();
-}
+class Cell {
+  constructor() {
 
-function cellBody() {
-
-}
-function cellMembrane() {
-  canvasArc(new Point(250, 250), 150, "salmon");
-  canvasRectangle(new Point(550, 100), new Point(300, 300), "5", "forestgreen");
-}
-function nucleus() {
-  canvasArc(new Point(230, 240), 50, "mediumslateblue");
-  canvasArc(new Point(650, 240), 50, "mediumslateblue");
-}
-
-function canvasText(p, text, colour) {
-  context.fillStyle = colour;
-  context.font = '20px serif';
-  context.beginPath();
-  context.fillText(text, p.x, p.y);
-  context.fill();
-  context.closePath();
-}
-function canvasRectangle(p1, p2, lineWidth, colour) {
-  context.strokeStyle = colour;
-  context.strokeStyle = lineWidth;
-  context.beginPath();
-  context.strokeRect(p1.x, p1.y, p2.x, p2.y);
-  context.stroke();
-  context.closePath();
-}
-function canvasArc(p, r, colour) {
-  context.strokeStyle = colour;
-  context.lineWidth = "5";
-  context.beginPath();
-  context.arc(p.x, p.y, r, 0, Math.PI * 2);
-  context.stroke();
-  context.closePath();
-}
-
-class Point {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
   }
 }
 
+class Membrane {
+  constructor() {
+    
+  }
+}
 
+class Nucleus {
+  constructor(nuclearEnvelope, nucleolus) {
+    this.nuclearEnvelope = nuclearEnvelope;
+    this.nucleolus = nucleolus;
+  }
+}
+class NuclearEnvelope {
+  constructor() {
 
+  }
+}
 
+class Nucleolus {
+  constructor() {
+    this.makeNucleolus();
+  }
+  makeNucleolus() {
+    canvasFillArc(new Point(230, 260), 20, "rebeccapurple");
+  }
+}
 
-
-
-
-
-
-
+class Chromatin {
+  constructor(begin, control, end, colour) {
+    this.begin = begin;
+    this.control = control;
+    this.end = end;
+    this.width = Math.random() * 3;
+    this.colour = colour;
+    this.makeChromatin();
+  }
+  makeChromatin() {
+    canvasQuadraticCurve(this.begin, this.control, this.end, this.width, this.colour);
+  }
+}
 
 
 
