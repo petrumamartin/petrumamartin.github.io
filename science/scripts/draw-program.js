@@ -59,8 +59,8 @@ function canvasQuadraticCurve(begin, control, end, width, colour) {
   context.moveTo(begin.x, begin.y);
   context.quadraticCurveTo(control.x, control.y, end.x, end.y);
   context.stroke();
-  context.quadraticCurveTo(230, 240, 250, 240);
-  context.stroke();
+  //context.quadraticCurveTo(230, 240, 250, 240);
+  //context.stroke();
   context.closePath();
 }
 
