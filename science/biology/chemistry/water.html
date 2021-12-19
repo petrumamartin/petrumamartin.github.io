@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<!--
+author:	  Peter A. Martin
+name:	    water.html
+date:	    Saturday, December 18, 2021
+purpose:  demonstrate properties and behaviours of water
+-->
+
+<html lang="en-CA">
+<head>
+	<title>Water</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="main.css" rel="stylesheet" />
+<style>
+canvas {
+  border: 1px solid 
+}
+#images {
+  visibility: hidden;
+}
+</style>
+</head>
+<body onload="main();">
+  <a href="..\biology.html">Back to Biology</a>
+  <h1>Properties and Behaviours of Water</h1>
+  <canvas id="canvas" width="500" height="400"></canvas>
+
+  <div id="images">
+    <img id="delta-negative" src="..\images\delta-negative.png" width="17" height="15" alt="delta-negative" />
+    <img id="delta-positive" src="..\images\delta-positive.png" width="17" height="15" alt="delta-positive" />
+</div>
+</body>
+</html>
+<script src="..\..\scripts\draw-program.js"></script>
+<script>
+const canvas = document.getElementById("canvas");
+const context = canvas.getContext("2d");
+function main() {
+  canvasCircle(new Point(190, 200), '10', 'rgb(255, 34, 0)');
+
+  canvasArc(new Point(150, 150), '10', '2', 'rgb(0,0,0)');
+  canvasCircle(new Point(150, 150), '9', 'rgb(255,255,255)');
+  canvasLine(new Point(183, 193), new Point(156, 159), '1', 'rgb(0,0,0)');
+
+  canvasArc(new Point(230, 150), '10', '2', 'rgb(0,0,0)');
+  canvasCircle(new Point(230, 150), '9', 'rgb(255,255,255)');
+  canvasLine(new Point(197, 193), new Point(223, 157), '1', 'rgb(0,0,0)');
+
+  canvasCircle(new Point(170, 215), '2', 'rgb(0,0,0)');
+  canvasCircle(new Point(177, 222), '2', 'rgb(0,0,0)');
+
+  canvasCircle(new Point(204, 222), '2', 'rgb(0,0,0)');
+  canvasCircle(new Point(210, 215), '2', 'rgb(0,0,0)');
+
+  // second water molecule central oxygen
+  canvasCircle(new Point(120, 115), '10', 'rgb(255, 34, 0)');
+
+  canvasArc(new Point(), '10', '2', 'rgb(0,0,0)');
+  canvasCircle(new Point(), '9', 'rgb(255,255,255)');
+  canvasLine(new Point(), new Point(), '1', 'rgb(0,0,0)');
+
+  canvasArc(new Point(), '10', '2', 'rgb(0,0,0)');
+  canvasCircle(new Point(), '9', 'rgb(255,255,255)');
+  canvasLine(new Point(), new Point(), '1', 'rgb(0,0,0)');
+
+  canvasCircle(new Point(129, 135), '2', 'rgb(0,0,0)');
+  canvasCircle(new Point(137, 128), '2', 'rgb(0,0,0)');
+
+  canvasCircle(new Point(104, 128), '2', 'rgb(0,0,0)');
+  canvasCircle(new Point(98, 114), '2', 'rgb(0,0,0)');
+
+  canvasQuadraticCurve(new Point(130, 113), new Point(155, 110), new Point(148, 140), '3', 'rgb(0,0,255)');
+  canvasQuadraticCurve(new Point(116, 124), new Point(110, 155), new Point(140, 149), '3', 'rgb(0,0,255)');
+
+  canvasText('Hydrogen bond', new Point(160, 90), 'rgb(0,0,0)');
+  canvasLine(new Point(175, 100), new Point(150, 115), '3', 'rgb(0,0,0)');
+
+  const deltaNegative = document.getElementById("delta-negative");
+  context.drawImage(deltaNegative, 132, 93);
+  const deltaPositive = document.getElementById("delta-positive");
+  context.drawImage(deltaPositive, 155, 125);
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
