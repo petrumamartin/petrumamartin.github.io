@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<!--
+author:	Peter A. Martin
+name:	trigonometric-functions.html
+date:	Friday, January 14, 2021
+purpose: display output for any solution to right triangles
+-->
+
+<html lang="en-CA">
+<head>
+	<title>Trigonometric Functions</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="html, template, nav, article" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="" rel="stylesheet" />
+<style>
+#sinBox { width: 300px; height: 30px; }
+.sinBox { position: absolute; }
+#sinDegree { position: relative; left: 5px; top: 5px; }
+#sinRadian { position: relative; left: 55px; top: 5px; }
+#sinGradiant { position: relative; left: 105px; top: 5px; }
+
+#cosBox { width: 150px; height: 20px }
+.cosBox { position: absolute; }
+#cosDegree { position: relative; left: 5px; top: 5px; }
+#cosRadian { position: relative; left: 55px; top: 5px; }
+#cosGradiant { position: relative; left: 105px; top: 5px; }
+
+#tanBox { width: 250px; height: 30px; }
+.tanBox { position: absolute; }
+#tanDegree { position: relative; left: 5px; top: 5px; }
+#tanRadian { position: relative; left: 55px; top: 5px; }
+#tanGradiant { position: relative; left: 105px; top: 5px; }
+
+canvas { border: 1px solid red; }
+
+svg { border: 1px solid red; }
+
+
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<a href="..\mathematics.html">Back to Mathematics</a>
+<h1>The Trigonometric Functions</h1>
+<h2>coordinates</h2>
+<input type="text" id="angle" />
+<button id="solution" onclick="displaySolutions();terminalPoint()">Solution</button>
+
+<h4>sin</h4>
+<div id="sinBox">
+	<span id="sinDegree" class="sinBox"></span>
+	<span id="sinRadian" class="sinBox"></span>
+	<span id="sinGradiant" class="sinBox"></span>
+</div>
+
+<h4>cos</h4>
+<div id="cosBox">
+	<span id="cosDegree" class="cosBox"></span>
+	<span id="cosRadian" class="cosBox"></span>
+	<span id="cosGradiant" class="cosBox"></span>
+</div>
+
+<h4>tan</h4>
+<div id="tanBox">
+	<span id="tanDegree" class="tanBox"></span>
+	<span id="tanRadian" class="tanBox"></span>
+	<span id="tanGradiant" class="tanBox"></span>
+</div>
+
+<canvas id="canvas" width="300" height="300"></canvas>
+<script>
+let canvas = document.getElementById("canvas");
+let context = canvas.getContext("2d");
+context.strokeStyle = "red";
+context.lineWidth = "4";
+context.beginPath();
+context.arc(150, 150, 140, 0, Math.PI * 2);
+context.stroke();
+context.closePath();
+
+context.strokeStyle = "midnightblue";
+context.lineWidth = "2";
+context.beginPath();
+context.moveTo(150, 150);
+context.lineTo(288, 150);
+context.stroke();
+context.closePath();
+
+var x2temp, y2temp, x2, y2;
+var convertToRadian;
+var drawAngle;
+function terminalPoint() {
+	drawAngle = document.querySelector("#angle").value;
+
+	convertToRadian = drawAngle / ( 180 / Math.PI );
+	x2temp = Math.round(Math.cos(convertToRadian) * 138);
+	y2temp = Math.round(Math.sin(convertToRadian) * 138);
+	document.querySelector("h2").innerHTML = "x-coord: " +x2temp + "&nbsp;&nbsp;&nbsp; y-coord: " + y2temp;
+	x2 = 150 + x2temp;
+	y2 = 150 - y2temp;
+
+	context.strokeStyle = "dodgerblue";
+	context.lineWidth = "1";
+	context.beginPath();
+	context.moveTo(150, 150);
+	context.lineTo(x2, y2);
+	context.stroke();
+	context.closePath();
+
+	terminal.setAttribute("x2", x2);
+	terminal.setAttribute("y2", y2);
+}
+
+
+</script>
+
+
+
+<svg width="300" height="300">
+	<circle cy="150" cx="150" r="140" stroke="red" fill="transparent" stroke-width="4" />
+	<line id="initial" x1="150" y1="150" x2="288" y2="150" stroke="midnightblue" stroke-width="2" />
+	<line id="terminal" x1="150" y1="150" x2="288" y2="150" stroke="dodgerblue" stroke="width="2" />
+</svg>
+<script>
+
+
+</script>
+</body>
+</html>
+<script src="..\scripts\trigonometric-functions.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
