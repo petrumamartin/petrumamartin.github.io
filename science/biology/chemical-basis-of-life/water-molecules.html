@@ -9,7 +9,7 @@ purpose: show case some scalable vector graphics
 
 <html lang="en-CA">
 <head>
-	<title>Water Molecules</title>
+	<title>Water Molecules Interactive</title>
 	<meta charset="UTF-8" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -24,6 +24,7 @@ purpose: show case some scalable vector graphics
 
 </head>
 <body id="newTitle" onload="createGrid();">
+<a href="..\biology.html">Back to Biology</a>
 <h1>Water Molecule - space filling diagram - <span id="coords"></span></h1>
 <svg id="graphics" width="1000" height="500" onclick="makeOxygen(event)">
 
@@ -88,7 +89,7 @@ function createGrid() {
 }
 function makeOxygen(event) {
 	xCoord = event.clientX - 8;
-	yCoord = event.clientY - 82;
+	yCoord = event.clientY - 107;
 	document.getElementById("coords").innerHTML = xCoord + " " + yCoord;
 	oxygen = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 	oxygen.setAttribute("cx", xCoord);
