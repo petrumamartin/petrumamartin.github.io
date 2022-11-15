@@ -28,6 +28,7 @@ class HumanOrganSystems {
 class DigestiveSystem {
 	constructor() {
 		console.log("Digestive System 		-Running");
+	}
 }
 class RespitorySystem {
 	constructor() {
