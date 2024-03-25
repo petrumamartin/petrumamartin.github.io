@@ -6,14 +6,14 @@ purpose:  program code for biology section
 
 */
 var aminoacidName = [
-  "Histidine", "Isoleucine", "Leucine", "Lysine", "Methionine", "Phenylalanine", "Threonine", "Tryptophan", "Valine", "Arginine", "Cysteine", "Glutamine", "Glycine", "Proline", "Tyrosine", "Alanine", "Aspartic acid", "Asparagine", "Glutamic acid", "Serine", "Selenocysteine", "Pyrrolysine" 
+  "Histidine", "Isoleucine", "Leucine", "Lysine", "Methionine", "Phenylalanine", "Threonine", "Tryptophan", "Valine", "Arginine", "Cysteine", "Glutamine", "Glycine", "Proline", "Tyrosine", "Alanine", "Aspartic acid", "Asparagine", "Glutamic acid", "Serine"
 ];
 var aminoacidSymbol = [
-  "His", "Ile", "Leu", "Lys", "Met", "Phe", "Thr", "Trp", "Val", "Arg", "Cys", "Gln", "Gly", "Pro", "Tyr", "Ala", "Asp", "Asp", "Glu", "Ser", "Sec", "Pyl"
+  "His", "Ile", "Leu", "Lys", "Met", "Phe", "Thr", "Trp", "Val", "Arg", "Cys", "Gln", "Gly", "Pro", "Tyr", "Ala", "Asp", "Asp", "Glu", "Ser"
 ];
 
 var aminoacidEssentiality = [
-  "E", "E", "E", "E", "E", "E", "E", "E", "E", "C", "C", "C", "C", "C", "C", "N", "N", "N", "N", "N", "N", "N"
+  "E", "E", "E", "E", "E", "E", "E", "E", "E", "C", "C", "C", "C", "C", "C", "N", "N", "N", "N", "N"
 ];
 
 printProteins();
