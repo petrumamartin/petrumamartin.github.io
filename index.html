@@ -6,6 +6,9 @@
 <link rel="stylesheet" type="text/css" href="main.css">
 <script src="scripts\account.js"></script>
 <style>
+body {
+ background-color: darkblue;
+}
 h1 {
 	text-align: center;
 	font-size: 4em;
@@ -30,7 +33,7 @@ h1 {
 </script>
 </head>
 <body>
-<div id="main">
+<main>
 <nav>
 	<ul>
 		<a href="index.html"><li class="menu">Home</li></a>
@@ -46,13 +49,15 @@ h1 {
 
 </nav>
 <header>
-<h1>Welcome to my Website</h1>
-<span id="login">
-	<a href="accounts\login.html">Login</a>
-	<a href="accounts\create-account.html">Create Account</a>
+<h1 id="title">Welcome to my Website</h1>
+<span id="authentication">
+	<a href="accounts\login.html" id="login">Login</a>
+	<a href="accounts\create-account.html" id="create">Create Account</a>
 </span>
 </header>
-</div>
+</main>
+
+
 
 <dialog id="dialogue">
 	<h3>Press <span id="codeClause"><code>Esc</code></span> to close this dialogue</h3>
