@@ -2,18 +2,11 @@
 <html>
 <head>
 <title>Welcome</title>
+<link rel="stylesheet" href="css/form.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="main.css">
 <script src="scripts\account.js"></script>
 <style>
-body {
- background-color: darkblue;
-}
-h1 {
-	text-align: center;
-	font-size: 4em;
-	font-family: "Footlight MT", serif;
-}
 #dialogue {
 	width: 400px;
 	height: 300px;
@@ -25,11 +18,48 @@ h1 {
 }
 .pointer {cursor: pointer;}
 
+
+
 </style>
 <script>
 	$(document).ready(function(){
 		if(accountValid) $("#secret").css({"color":"red"});
 	});
+
+
+let loginLink, createLink, loginButton, cancelLogin, createButton, cancelCreate;
+let login, create;
+
+function links() {
+	loginLink = document.querySelector("#loginLink");
+	login = document.querySelector("#login");
+	loginLink.addEventListener('click', click_login);
+
+	createLink = document.querySelector("#createLink");
+	create = document.querySelector("#create");
+	createLink.addEventListener('click', click_create);
+
+	cancelLogin = document.querySelector("#cancelLogin");
+	cancelLogin.addEventListener('click', click_cancelLogin)
+
+	cancelCreate = document.querySelector("#cancelCreate");
+	cancelCreate.addEventListener('click', click_cancelCreate);
+
+
+}
+function click_login() {
+ login.style.display="block";
+}
+function click_create() {
+ create.style.display="block";
+}
+function click_cancelLogin() {
+	login.style.display="none";
+}
+function click_cancelCreate() {
+	create.style.display="none";
+}
+
 </script>
 </head>
 <body>
@@ -52,8 +82,8 @@ h1 {
 <header>
 <h1 id="title">Welcome to my Website</h1>
 <span id="authentication">
-	<a href="accounts\login.html" id="login">Login</a>
-	<a href="accounts\create-account.html" id="create">Create Account</a>
+	<div id="loginLink">Login</div>
+	<div id="createLink">Create Account</div>
 </span>
 </header>
 
@@ -61,8 +91,87 @@ h1 {
 
 </main>
 
+<!-- The Authentication models :: Start -->
+<style>
+a#hint{
+    visibility: hidden;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+}
 
 
+</style>
+
+<div id="login">
+<h1 id="loginTitle">Login Page</h1>
+<form id="form-login">
+	<div id="usernameBox">
+		<label for="username" class="align-input">Username:
+				<input type="text" id="username" name="username">
+		</label>
+	</div>
+	<div id="passwordBox">
+		<label for="password" class="align-input">Password:
+				<input type="text" id="password" name="password">
+		</label>
+	</div>
+		<div id="loginButton" onclick="retrieveLogin()">Login</div>
+		<div id="cancelLogin">Cancel</div>
+		<a href="hint.html" id="hint">Hint</a>
+</form>
+<!--<p id="identification"></p>-->
+</div>
+
+
+<div id="create">
+	<h1 id="createTitle">Create Account</h1>
+<form id="form-account">
+	<div id="fnBox">
+		<label for="firstname" class="align-input">First Name:
+			<input type="text" id="firstname" name="first-name" />
+		</label>
+	</div>
+	<div id="unBox">
+		<label for="username" class="align-input">Username:
+			<input type="text" id="username" name="user-name" />
+		</label>
+	</div>
+	<div id="pwBox">
+		<label for="password" class="align-input">Password:
+			<input type="text" id="password" name="password" />
+		</label>
+	</div>
+
+
+	<div id="recoveryBox">
+		<p id="recovery">Password Recovery</p>
+		<p id="recoveryQuestion">What is your favourite colour?</p>
+	</div>
+
+	<div id="hintBox">
+		<label for="hint" class="align-input">Answer:
+			<input type="text" id="hint" name="hint" />
+		</label>
+	</div>
+
+	<div id="createButton" onclick="createAccount()">
+		Create
+	</div>
+	<div id="cancelCreate">
+		Cancel
+	</div>
+
+</form>
+<!--
+<p id="identification"></p>
+<p id="newmessage"></p>
+-->
+</div>
+
+<!-- The Authentication models :: Stop -->
+
+
+	<p id="newmessage"></p>
 <dialog id="dialogue">
 	<h3>Press <span id="codeClause"><code>Esc</code></span> to close this dialogue</h3>
 </dialog>
@@ -78,6 +187,9 @@ h1 {
 
 
 </body>
+<script>
+	links();
+</script>
 </html>
 
 
