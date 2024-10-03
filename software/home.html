@@ -12,13 +12,13 @@ a { color: skyblue; }
 <script>
  function main() {
   let x = window.innerWidth;
-  let wx = (x - 50);
+  let wx = (x - 20);
   let y = window.innerHeight;
-  let hy = (y - 50);
+  let hy = (y - 20);
 
   let calX = (x - wx)/2;
   let calY = (y - hy)/2;
-  let msg = x + " x " + y;
+  let msg = x + " x " + y + "<br>" + wx + " x " + hy + "<br>" + calX + " x " + calY;
 
   document.querySelector("#msg").innerHTML = msg;
 
