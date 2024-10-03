@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive</title>
+<style>
+* { margin: 0px; }
+body { position: absolute; background-color: royalblue; }
+main { position: absolute; background-color: navy; color: skyblue; width: 1200px; height: 500px; }
+#msg, a { font-weight: normal; font-family: Garamond; font-size: 3em; }
+a { color: skyblue; }
+</style>
+<script>
+ function main() {
+  let x = window.innerWidth;
+  let wx = (x - 50);
+  let y = window.innerHeight;
+  let hy = (y - 50);
+
+  let calX = (x - wx)/2;
+  let calY = (y - hy)/2;
+  let msg = x + " x " + y;
+
+  document.querySelector("#msg").innerHTML = msg;
+
+  document.querySelector("main").style.width = wx + "px";
+  document.querySelector("main").style.left = calX + "px";
+  document.querySelector("main").style.height = hy + "px";
+  document.querySelector("main").style.top = calY + "px";
+  
+ }
+</script>
+</head>
+<body>
+<main>
+ <h1 id="msg"></h1>
+ <a href="..\index.html">Home</a>
+</main>
+
+</body>
+<script>
+ main();
+</script>
+</html>
