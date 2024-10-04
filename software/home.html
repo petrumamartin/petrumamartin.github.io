@@ -16,15 +16,17 @@ a { color: skyblue; }
   let y = window.innerHeight;
   let hy = (y - 60);
 
+  let tx = 968, ty = 1580;
+
   let calX = (x - wx)/2;
   let calY = (y - hy)/2;
   let msg = x + " x " + y + "<br>" + wx + " x " + hy + "<br>" + calX + " x " + calY;
 
   document.querySelector("#msg").innerHTML = msg;
 
-  document.querySelector("#main").style.width = "965px";
+  document.querySelector("#main").style.width = tx + "px";
   document.querySelector("#main").style.left = "5px";
-  document.querySelector("#main").style.height = "1570px";
+  document.querySelector("#main").style.height = ty + "px";
   document.querySelector("#main").style.top = "15px";
   
  }
