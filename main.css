@@ -1,3 +1,7 @@
+html {
+	background-color: navy;
+}
+
 body {
 	position: absolute;
 	left: 270px;
