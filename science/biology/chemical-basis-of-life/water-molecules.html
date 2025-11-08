@@ -15,44 +15,23 @@ purpose: show case some scalable vector graphics
 	<meta name="keywords" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link href="main.css" rel="stylesheet" />
+	<link href="..\..\main.css" rel="stylesheet" />
 <style>
+#waterMolecules {
+	position: absolute;
+	left: 200px;
+	top: 250px;
+}
+svg { background-color: linen; }
 #graphics {
 	border: 1px solid red;
 }
 </style>
-
-</head>
-<body id="newTitle" onload="createGrid();">
-<a href="..\biology.html">Back to Biology</a>
-<h1>Water Molecule - space filling diagram - <span id="coords"></span></h1>
-<svg id="graphics" width="1000" height="500" onclick="makeOxygen(event)">
-
-	<circle cx="200" cy="100" r="20" fill="red" id="circleOne" />
-	<circle cx="180" cy="120" r="10" stroke="black" stroke-width="1" fill="white" />
-	<circle cx="220" cy="120" r="10" stroke="black" stroke-width="1" fill="white" />
-
-	<circle cx="157" cy="148" r="20" fill="red" />
-	<circle cx="129" cy="148" r="10" stroke="black" stroke-width="1" fill="white" />
-	<circle cx="158" cy="175" r="10" stroke="black" stroke-width="1" fill="white" />
-
-	<circle cx="242" cy="148" r="20" fill="red" />
-	<circle cx="270" cy="150" r="10" stroke="black" stroke-width="1" fill="white" />
-	<circle cx="232" cy="174" r="10" stroke="black" stroke-width="1" fill="white" />
-
-	<circle cx="215" cy="205" r="20" fill="red" />
-	<circle cx="140" cy="207" r="20" fill="red" />
-	<circle cx="90" cy="150" r="20" fill="red" />
-	<circle cx="302" cy="163" r="20" fill="red" />
-
-</svg>
-
-
-
-</body>
-</html>
 <script>
-var xCoord, yCoord;
+function main() {
+ createGrid();
+}
+var xCoord, yCoord, svg;
 var newLineNode;
 svg = document.querySelector("svg");
 var oxygen;
@@ -88,8 +67,8 @@ function createGrid() {
 	}
 }
 function makeOxygen(event) {
-	xCoord = event.clientX - 8;
-	yCoord = event.clientY - 107;
+	xCoord = event.clientX - 311;
+	yCoord = event.clientY - 318;
 	document.getElementById("coords").innerHTML = xCoord + " " + yCoord;
 	oxygen = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 	oxygen.setAttribute("cx", xCoord);
@@ -100,6 +79,43 @@ function makeOxygen(event) {
 }
 
 </script>
+</head>
+<body id="newTitle">
+
+<h1 id="title">Water Molecule - space filling diagram - <span id="coords"></span></h1>
+<div id="links">
+ <a href="..\biology.html">Back to Biology</a>
+</div>
+<div id="waterMolecules">
+<svg id="graphics" width="1000" height="500" onclick="makeOxygen(event)">
+
+	<circle cx="200" cy="100" r="20" fill="red" id="circleOne" />
+	<circle cx="180" cy="120" r="10" stroke="black" stroke-width="1" fill="white" />
+	<circle cx="220" cy="120" r="10" stroke="black" stroke-width="1" fill="white" />
+
+	<circle cx="157" cy="148" r="20" fill="red" />
+	<circle cx="129" cy="148" r="10" stroke="black" stroke-width="1" fill="white" />
+	<circle cx="158" cy="175" r="10" stroke="black" stroke-width="1" fill="white" />
+
+	<circle cx="242" cy="148" r="20" fill="red" />
+	<circle cx="270" cy="150" r="10" stroke="black" stroke-width="1" fill="white" />
+	<circle cx="232" cy="174" r="10" stroke="black" stroke-width="1" fill="white" />
+
+	<circle cx="215" cy="205" r="20" fill="red" />
+	<circle cx="140" cy="207" r="20" fill="red" />
+	<circle cx="90" cy="150" r="20" fill="red" />
+	<circle cx="302" cy="163" r="20" fill="red" />
+
+</svg>
+</div>
+
+
+</body>
+<script>
+ main();
+</script>
+</html>
+
 
 
 
