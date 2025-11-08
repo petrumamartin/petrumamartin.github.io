@@ -15,8 +15,14 @@ purpose:  detail the structure and function of proteins
 	<meta name="keywords" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link href="main.css" rel="stylesheet" />
+  
+	<link href="..\..\main.css" rel="stylesheet" />
 <style>
+#proteinDisplay {
+  position: absolute;
+  left: 250px;
+  top: 200px; 
+}
 #proteins {
   font-family: "Lucida Console";
   line-height: 1.5em;
@@ -28,6 +34,7 @@ purpose:  detail the structure and function of proteins
   width: 200px;
   height: 100px;
   background-color:honeydew;
+  color: black;
   font-size: 1.3em;
 }
 </style>
@@ -36,14 +43,19 @@ purpose:  detail the structure and function of proteins
 </script>
 </head>
 <body onload="printProteins()">
-<a href="..\biology.html">Back to Biology</a>
-<h1>Amino Acids - select one</h1>
+
+<h1 id="title">Amino Acids - select one</h1>
+<div id="links">
+ <a href="..\biology.html">Back to Biology</a>
+</div>
+<div id="proteinDisplay">
 <div id="proteins">
 </div>
 
 <button onclick="clearData()">Clear</button>
 <div id="protein-properties">
  
+</div>
 </div>
 </body>
 </html>
