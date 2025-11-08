@@ -1,7 +1,10 @@
 <html>
 <head>
 <title>The Periodic Table</title>
+<link href="..\main.css" rel="stylesheet">
 <style type="text/css">
+body { background-color: black; }
+#periodicTable { position: absolute; left: 300px; top: 250px; }
 table	{ border-collapse: collapse; }
 div#periodicTable	{ position: absolute; left: 100px; }
 .blank	{ border: 0px; }
@@ -20,8 +23,12 @@ td.green	{ background-color: rgb(200, 255, 120); }
 </head>
 <body>
 <!--<div id="periodicTable">-->
-	<a href="chemistry.html">Back to Chemistry</a>
-	<p style="font-family: calibri;font-size: 20pt;margin-left:100px;margin-bottom:0px;">PERIODIC TABLE OF THE ELEMENTS</p>
+	
+	<h1 id="title" tyle="font-family: calibri;font-size: 20pt;margin-left:100px;margin-bottom:0px;">PERIODIC TABLE OF THE ELEMENTS</h1>
+<div id="links">
+ <a href="chemistry.html">Back to Chemistry</a>
+</div>
+<div id="periodicTable">
 <table lign="center">
 	<tr>
 <td class="periods"></td>
@@ -296,6 +303,7 @@ td.green	{ background-color: rgb(200, 255, 120); }
 	<span class="atomWeight">(260)</span></td>
 		</tr>
 	</table>
+</div>
 <!--</div>-->
 </body>
 </html>
