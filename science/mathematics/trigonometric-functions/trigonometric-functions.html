@@ -15,8 +15,13 @@ purpose: display output for any solution to right triangles
 	<meta name="keywords" content="html, template, nav, article" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link href="" rel="stylesheet" />
+	<link href="..\..\main.css" rel="stylesheet" />
 <style>
+#trigonometry {
+	position: absolute;
+	left: 100px;
+	top: 250px;
+}
 #sinBox { width: 300px; height: 30px; }
 .sinBox { position: absolute; }
 #sinDegree { position: relative; left: 5px; top: 5px; }
@@ -46,8 +51,12 @@ svg { border: 1px solid red; }
 </script>
 </head>
 <body>
+
+<h1 id="title">The Trigonometric Functions</h1>
+<div id="links">
 <a href="..\mathematics.html">Back to Mathematics</a>
-<h1>The Trigonometric Functions</h1>
+</div>
+<div id="trigonometry">
 <h2>coordinates</h2>
 <input type="text" id="angle" />
 <button id="solution" onclick="displaySolutions();terminalPoint()">Solution</button>
@@ -127,6 +136,7 @@ function terminalPoint() {
 	<line id="initial" x1="150" y1="150" x2="288" y2="150" stroke="midnightblue" stroke-width="2" />
 	<line id="terminal" x1="150" y1="150" x2="288" y2="150" stroke="dodgerblue" stroke="width="2" />
 </svg>
+</div>
 <script>
 
 
