@@ -16,20 +16,29 @@ purpose: 	display key molecular geometries
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	
-	<link href="" rel="stylesheet" />
+	<link href="..\..\main.css" rel="stylesheet" />
 <style>
-
+body { background-color: black; }
+#molecularGeometry {
+	position: absolute;
+	left: 400px; 
+	top: 200px;
+}
+canvas { background-color: linen; }
 </style>
 <script>
 
 </script>
 </head>
 <body onload="main();">
-<a href="..\chemistry.html">Back to Chemistry</a>
-<h1>Molecular Geometry</h1>
 
-<canvas id="canvas" width="500" height="1000"></canvas>
-
+<h1 id="title">Molecular Geometry</h1>
+<div id="links">
+ <a href="..\chemistry.html">Back to Chemistry</a>
+</div>
+<div id="molecularGeometry">
+<canvas id="canvas" width="500" height="750"></canvas>
+</div>
 
 </body>
 </html>
