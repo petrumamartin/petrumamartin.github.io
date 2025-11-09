@@ -22,7 +22,7 @@ function printProteins() {
 
   text += "<ul>";
   for(var i = 0; i < aminoacidName.length; i++)
-    text += "<li><span onclick=\"proteininfo(" + i + ")\">" + aminoacidSymbol[i] + " " + aminoacidEssentiality[i] + " " + aminoacidName[i] + "</span></li>";
+    text += "<li style='list-style-type: none;'><span onclick=\"proteininfo(" + i + ")\">" + aminoacidSymbol[i] + " " + aminoacidEssentiality[i] + " " + aminoacidName[i] + "</span></li>";
   text += "</ul>";
 
   document.getElementById("proteins").innerHTML = text;
@@ -53,7 +53,7 @@ class AminoAcidType extends AminoAcid {
   }
 
   printAminoAcidType() {
-    document.getElementById("protein-properties").innerHTML = this.symbol + " " + this.name;
+    document.getElementById("protein-properties").innerHTML = this.symbol + " : " + this.name;
   };  
 }
 
