@@ -15,35 +15,38 @@ purpose: display output for any solution to right triangles
 	<meta name="keywords" content="html, template, nav, article" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="..\scripts\trigonometric-functions.js"></script>
 	<link href="..\..\main.css" rel="stylesheet" />
 <style>
-#trigonometry {
-	position: absolute;
-	left: 100px;
-	top: 250px;
+h1#title { font-size: 34pt; }
+#links { left: 40px; top: 140px; }
+#trigonometry { position: absolute; left: 140px; top: 120px; }
+#input { position: absolute; left: 0px; top: 30px; width: 240px; height: 40px; }
+#angle { position: absolute; left: 10px; top: 1px; width: 60px; height: 30px; font-size: 18pt; text-align: center; align-content: center; }
+#solution { position: absolute; left: 100px; top: 5px; width: 80px; height: 30px; font-size: 14pt; 
+ text-align: center; align-content: center; 
 }
-#sinBox { width: 300px; height: 30px; }
-.sinBox { position: absolute; }
-#sinDegree { position: relative; left: 5px; top: 5px; }
-#sinRadian { position: relative; left: 55px; top: 5px; }
-#sinGradiant { position: relative; left: 105px; top: 5px; }
 
-#cosBox { width: 150px; height: 20px }
-.cosBox { position: absolute; }
-#cosDegree { position: relative; left: 5px; top: 5px; }
-#cosRadian { position: relative; left: 55px; top: 5px; }
-#cosGradiant { position: relative; left: 105px; top: 5px; }
+#display { position: absolute; left: -60px; top: 100px; }
+#svg { position: absolute; left: 330px; top: 0px; }
 
-#tanBox { width: 250px; height: 30px; }
-.tanBox { position: absolute; }
-#tanDegree { position: relative; left: 5px; top: 5px; }
-#tanRadian { position: relative; left: 55px; top: 5px; }
-#tanGradiant { position: relative; left: 105px; top: 5px; }
+#data { position: absolute; left: 620px; top: 70px; }
+#am { position: absolute; left: 40px; top: 76px; width: 240px; height: 44px; background-color: purple; }
+.m { position: absolute; top: 5px; width: 80px; height: 44px; margin: 0px; padding: 0px; display: inline; 
+	 font-size: 18pt; }
+#deg { left: 14px; } #rad { left: 92px; } #grad { left: 164px; }
+.box { width: 280px; height: 44px; position: absolute; left: 0px;  }
+h4 { position: absolute; top: 5px; left: 5px; font-size: 18pt; font-weight: normal; margin: 0px; padding: 0px; }
+#sinBox { top: 120px; background-color: green; }
+#cosBox { top: 164px; background-color: red;}
+#tanBox { top: 208px; background-color: blue; }
+.degree { position: absolute; left: 60px; top: 14px; }
+.radian { position: absolute; left: 140px; top: 14px; }
+.gradian { position: absolute; left: 220px; top: 14px; }
+#coords { position: absolute; left: 0px; top: 260px; width: 300px; font-weight: normal; }
 
 canvas { border: 1px solid red; }
-
 svg { border: 1px solid red; }
-
 
 </style>
 <script>
@@ -52,37 +55,56 @@ svg { border: 1px solid red; }
 </head>
 <body>
 
-<h1 id="title">The Trigonometric Functions</h1>
+<h1 id="title">Trigonometric Functions</h1>
 <div id="links">
-<a href="..\mathematics.html">Back to Mathematics</a>
+ <a href="..\mathematics.html">Mathematics</a>
 </div>
+
 <div id="trigonometry">
-<h2>coordinates</h2>
-<input type="text" id="angle" />
-<button id="solution" onclick="displaySolutions();terminalPoint()">Solution</button>
+<div id="data">
+	<h2 id="coords">coordinates</h2>
+	<div id="input">
+	 <input type="text" id="angle" />
+	 <button id="solution" onclick="displaySolutions();terminalPoint()">Solution</button>
+	</div>
+ 
+	<div id="am">
+  <p class="m" id="deg">DEG</p>
+		<p class="m" id="rad">RAD</p>
+		<p class="m" id="grad">GRAD</p>
+	</div>
+	<div class="box" id="sinBox">
+		<h4>sin</h4>
+		<span id="sinDegree" class="degree"></span>
+		<span id="sinRadian" class="radian"></span>
+		<span id="sinGradiant" class="gradian"></span>
+	</div>
 
-<h4>sin</h4>
-<div id="sinBox">
-	<span id="sinDegree" class="sinBox"></span>
-	<span id="sinRadian" class="sinBox"></span>
-	<span id="sinGradiant" class="sinBox"></span>
+	<div class="box" id="cosBox">
+		<h4>cos</h4>
+		<span id="cosDegree" class="degree"></span>
+		<span id="cosRadian" class="radian"></span>
+		<span id="cosGradiant" class="gradian"></span>
+	</div>
+
+	<div class="box" id="tanBox">
+	<h4>tan</h4>	
+		<span id="tanDegree" class="degree"></span>
+		<span id="tanRadian" class="radian"></span>
+		<span id="tanGradiant" class="gradian"></span>
+	</div>
 </div>
 
-<h4>cos</h4>
-<div id="cosBox">
-	<span id="cosDegree" class="cosBox"></span>
-	<span id="cosRadian" class="cosBox"></span>
-	<span id="cosGradiant" class="cosBox"></span>
-</div>
+<div id="display">
+	<canvas id="canvas" width="300" height="300"></canvas>
 
-<h4>tan</h4>
-<div id="tanBox">
-	<span id="tanDegree" class="tanBox"></span>
-	<span id="tanRadian" class="tanBox"></span>
-	<span id="tanGradiant" class="tanBox"></span>
+	<svg width="300" height="300" id="svg">
+	<circle cy="150" cx="150" r="140" stroke="red" fill="transparent" stroke-width="4" />
+	<line id="initial" x1="150" y1="150" x2="288" y2="150" stroke="midnightblue" stroke-width="2" />
+	<line id="terminal" x1="150" y1="150" x2="288" y2="150" stroke="dodgerblue" stroke="width="2" />
+</svg>
 </div>
-
-<canvas id="canvas" width="300" height="300"></canvas>
+</div>
 <script>
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
@@ -129,21 +151,12 @@ function terminalPoint() {
 
 </script>
 
-
-
-<svg width="300" height="300">
-	<circle cy="150" cx="150" r="140" stroke="red" fill="transparent" stroke-width="4" />
-	<line id="initial" x1="150" y1="150" x2="288" y2="150" stroke="midnightblue" stroke-width="2" />
-	<line id="terminal" x1="150" y1="150" x2="288" y2="150" stroke="dodgerblue" stroke="width="2" />
-</svg>
-</div>
 <script>
-
 
 </script>
 </body>
 </html>
-<script src="..\scripts\trigonometric-functions.js"></script>
+
 
 
 
