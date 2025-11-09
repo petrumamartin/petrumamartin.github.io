@@ -18,24 +18,48 @@ purpose:  detail the structure and function of proteins
   
 	<link href="..\..\main.css" rel="stylesheet" />
 <style>
+h1#title { letter-spacing: 5px; }
+#links { top: 150px; }
 #proteinDisplay {
   position: absolute;
   left: 250px;
-  top: 200px; 
+  top: 150px; 
 }
 #proteins {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  width: 240px;
   font-family: "Lucida Console";
-  line-height: 1.5em;
-  float: left;
+  line-height: 1.4em;
   cursor: pointer;
 }
 #protein-properties {
-  float: left;
-  width: 200px;
-  height: 30px;
-  background-color:honeydew;
-  color: black;
-  font-size: 1.3em;
+  position: absolute;
+  left: 300px;
+  top: 50px;
+  width: 240px;
+  height: 50px;
+  background-color:crimson;
+  color: white;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+  align-content: center;
+  border-radius: 10px;
+}
+#clear {
+  position: absolute;
+  left: 460px;
+  top: 120px;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: crimson;
+  color: thistle;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 1.5em;
   text-align: center;
   align-content: center;
 }
@@ -54,7 +78,7 @@ purpose:  detail the structure and function of proteins
 <div id="proteins">
 </div>
 
-<button onclick="clearData()">Clear</button>
+<button onclick="clearData()" id="clear">Clear</button>
 <div id="protein-properties">
  
 </div>
