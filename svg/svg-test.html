@@ -5,10 +5,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="..\css\main.css" />
 <style>
-body { background-color:co}
-svg {
-	border: 2px solid black;
+body { background-color: black; color: white; }
+svg { position: absolute; left: 140px; top: 150px; 
+	border: 2px solid white; background-color: darkslategray;  
 }
+#links a { color: skyblue; text-decoration: none; font-size: 14pt; }
 </style>
 <script>
 function main(){
@@ -21,21 +22,18 @@ function changeSize(e){
 	circle.setAttribute("cx", x);
 	circle.setAttribute("cy", y);
 	document.getElementById("paragraph").innerHTML = x + " " + y;
-/*
-	line.setAttribute("x2", x + 150);
-	line.setAttribute("y2", y + 150);
-*/	
+
 }
 </script>
 </head>
 <body onload="main();">
 <h1>Scalable Vector Graphics Interface</h1>
-<h3><a href="..\walk\walk-main.html">Walking</a> Main Page</h3>
+<h3 id="links"><a href="..\walk\walk-main.html">Walking</a> Main Page</h3>
 <p id="paragraph">&nbsp;</p>
 
 
 <svg id="svg" width="1000" height="400" onclick="changeSize(event)">
-	<circle id="circleGraphic" cx="10" cy="110" r="50" stroke="black" stroke-width="5" fill="red" />
+	<circle id="circleGraphic" cx="60" cy="60" r="50" stroke="black" stroke-width="5" fill="red" />
 </svg>
 
 
