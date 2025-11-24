@@ -1,0 +1,35 @@
+/*
+ File name:  main.css
+ Created:    Monday, November 24, 2025
+ Author:     Peter A. Martin
+ Purpose:    Stylesheet for layout.html
+*/
+
+* { margin: 0px; padding: 0px; }
+html { background-color: navy; }
+body { position: absolute; top: 5%; right: 5%; bottom: 5%; left: 5%; 
+ background-color: black;
+}
+#links { color: white; text-decoration: none; font-size: 14pt; }
+
+/* --------------------====  RESPONSIVE CODE  ====-------------------- */
+
+@media screen and (max-width: 599px) {
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+
+
+
+
+
+
+
