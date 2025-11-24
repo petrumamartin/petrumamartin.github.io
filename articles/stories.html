@@ -19,10 +19,11 @@ purpose: 	showcase for stories
 	<script src="controller.js"></script>
 <style>
 html {background-color: tomato;}
-body {background-color:lavender;}
-ul li {
-	list-style-type: none;
-}
+body {background-color:black; color: white; }
+.content { position: absolute; left: 60px; top: 140px; }
+#links { color: white; font-size: 14pt; text-decoration: none; }
+ul li { list-style-type: none; margin-bottom: 10px; }
+#stories a { color: white; text-decoration: none; font-size: 18pt; }
 </style>
 <script>
 
@@ -30,15 +31,17 @@ ul li {
 </head>
 <body>
 <nav></nav>
-<a href="super.html">Home</a>
+<div class="content">
+<a href="super.html" id="links">Home</a>
 <h1>Collection of Stories</h1>
-<ul>
+<ul id="stories">
 	<li><a href="stories\old-order.html">Old Order</a></li>
 	<li><a href="stories\doctor-f.html">Doctor F</a></li>
 	<li><a href="stories\menagerie.html">The Menagerie</a></li>
 	<li><a href="stories\rings-of-saturn.html">Rings of Saturn</a></li>
 	<li><a href="stories\traitor.html">The Traitor</a></li>
 </ul>
+</div>
 </body>
 </html>
 
