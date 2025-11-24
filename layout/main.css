@@ -11,19 +11,41 @@ body { position: absolute; top: 5%; right: 5%; bottom: 5%; left: 5%;
  background-color: black;
 }
 #links { color: white; text-decoration: none; font-size: 14pt; }
+header {
+ position: absolute; top: 2%; right: 3%; left: 3%; height: 60px; 
+ color: lightsteelblue;
+}
+header h1 { /*position: absolute; top: 1%; right: 2%; left: 2%;*/
+ font: normal 18pt 'copperplate gothic'; text-align: center; align-content: center; 
+}
+nav { position: absolute; left: 20px; top: 30px; 
+ font: normal 12pt 'calibri'; 
+}
 
 /* --------------------====  RESPONSIVE CODE  ====-------------------- */
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 599px) { 
+ header { top: 40px;
+  background-color: midnightblue; text-align: center; align-content: center; 
+ }
+ nav { top: 10px; }
+ nav #open { position: absolute; top: 0px; left: 0px; }
+ nav #close { position: absolute; top: 0px; left: 0px; }
+ #links { position: absolute; left: -5px; top: 30px; width: 150px; height: 200px; 
+  background-color: darkblue; color: white; padding: 10px; padding-left: 20px; border-radius: 10px; 
+  border: 2px solid lightskyblue;
+ }
+ #links a { color: white; text-decoration: none; font-size: 14pt; display: block; margin-bottom: 10px; }
+
 
 }
 
 @media screen and (min-width: 600px) and (max-width: 1199px) {
-
+ header { background-color: darkgreen; }
 }
 
 @media screen and (min-width: 1200px) {
-
+ header { background-color: darkred; }
 }
 
 
