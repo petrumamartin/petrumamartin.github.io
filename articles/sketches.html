@@ -18,8 +18,13 @@ purpose: wheat coloured page
 	<link href="..\css\articles-main.css" rel="stylesheet" />
 	<script src="controller.js"></script>
 <style>
-body {background-color: wheat;}
+body {background-color: darkgreen;}
+.content { position: absolute; left: 40px; top: 120px;}
 div.inline-element { display: inline; }
+#img01, #img02, #img03 { position: absolute; top: 40px; }
+#img01 { left: 40px; } #img02 {left: 300px; } #img03 { left: 560px; }
+#links { color: white; text-decoration: none; font-size: 18pt; }
+h3 { color: white; }
 </style>
 <script>
 
@@ -27,17 +32,20 @@ div.inline-element { display: inline; }
 </head>
 <body>
 <nav></nav>
-<a href="super.html">Home</a>
+<div class="content">
+<a href="super.html" id="links">Home</a>
+<div id="img01">
 <h3>Landscape Scene</h3>
 <img src="../images/landscape.png" alt="scenery" width="200" height="125" />
 </div>
-<div class="inline-element">
+<div class="inline-element" id="img02">
 <h3>A Conversation</h3>
 <img src="../images/conversation.png" alt="conversing" width="200" height="125" />
 </div>
-<div>
+<div id="img03">
 <h3>Sunset Landscape</h3>
 <img src="../images/sunset.png" alt="sunset" width="200" height="125" />
+</div>
 </div>
 </body>
 </html>
