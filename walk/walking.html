@@ -4,13 +4,10 @@
 <title>Boolean Gate</title>
 <link rel="stylesheet" type="text/css" href="..\css\main.css" />
 <style>
-canvas {
-    background-color: white;
-}
-p {
-    margin: 0px;
-    padding: 0px;
-}
+body { background-color: black; color: white; }
+canvas { border: 2px solid white; }
+p { margin: 0px; padding: 0px; }
+#links a { color: white; text-decoration: none; font-size: 20pt; }
 </style>
 <script>
 class Step {
@@ -23,10 +20,10 @@ class Step {
 </head>
 <body onload="move()">
 <h1>Walking Animation for Steps</h1>
-<h3><a href="walk-main.html">Walking</a> Main Page</h3>
+<h3 id="links"><a href="walk-main.html">Walking</a> Main Page</h3>
 
 
-<canvas id="path" width="400" height="300" style="border: 1px solid black"></canvas>
+<canvas id="path" width="400" height="300""></canvas>
 
 <p id="colour">&nbsp;</p>
 <p id="movement" style="font-size:64px;"></p>
@@ -70,7 +67,7 @@ function stepping( a ) {
 	var ctx = c.getContext( "2d" );
 	
 	ctx.beginPath();
-	ctx.fillStyle = "rgb( 255, 255, 255 )";
+	ctx.fillStyle = "rgb( 0, 0, 0 )";
 	ctx.fillRect( b - 41, 79, b + 41, 160 );
 
 	ctx.beginPath();
