@@ -4,23 +4,24 @@ $(document).ready(function(){
 	$("nav").append(menuBar);
 
 	var menu = [ 
+		   "Home",
 				 "Statement",
 				 "Sketches",
-				 "Book Reviews", 
+				 "Reviews", 
 				 "Stories", 
 				 "View", 
 				 "News", 
-				 "Home" 
+				  
 				];
 
 	var links = [ 
+					  "../index.html",
 				  "statement.html", 
 				  "sketches.html", 
 				  "book-reviews.html", 
 				  "stories.html", 
-				  "forestgreen.html", 
-				  "salmon.html", 
-				  "../index.html" 
+				  "darkgreen.html", 
+				  "salmon.html"
 				];
 
 
@@ -30,12 +31,17 @@ $(document).ready(function(){
 
 	$(".menu").css({
 		"display": "inline-block",
-		"padding": "5px",
-		"padding-right": "5px",
-		"padding-left": "15px",
 		"margin-right": "10px",
 		"border": "solid black 2px",
-		"width": "110px"
+		"width": "130px",
+		"height": "50px",
+		"background-color": "darkgreen",
+		"color": "white",
+		"border-radius": "10px",
+		"font-size": "20pt",
+		"align-content": "center",
+		"text-align": "center",
+		"letter-spacing": "2px"
 	});
 
 
