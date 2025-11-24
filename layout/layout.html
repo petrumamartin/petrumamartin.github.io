@@ -1,24 +1,50 @@
+<!--
+ File name:  layout.html
+ Created:    Monday, November 24, 2025
+ Author:     Peter A. Martin
+ Purpose:    Layout for the Layout page.
+-->
 <html>
  <head>
   <title>Layout Design</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
   <style>
   
   </style>
   <script>
 
    function main() {
-
+    nav();
    }
   </script>
  </head>
  <body>
-  <a href="../index.html" id="links">Home</a>
-  <div class="content">
-   
-  </div>
+ <main>
+  <header>
+   <h1 id="title">Responsive Web Layout</h1>
+  </header>
+  <nav>
+   <img src="mobile-nav-open.png" alt="mobile nav bar" id="open">
+   <img src="mobile-nav-close.png" alt="mobile nav close" id="close">
+   <div id="links">
+    <a href="../index.html">Home</a>
+    <a href="media-query.html">Media Query</a>
+    <a href="flexbox.html">Flexbod</a>
+    <a href="grid.html">Grid</a>
+   </div>
+  </nav>
+  <section>
+   <article>
+
+   </article>
+  </section>
+ </main>
  </body>
+ <script>
+  main();
+ </script>
 </html>
 
 
