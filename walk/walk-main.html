@@ -5,14 +5,26 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="..\css\main.css" />
 <style>
-
+* { margin: 0px; padding: 0px; }
+html { background-color: navy; }
+body { position: absolute; top: 5%; right: 5%; bottom: 5%; left: 5%; 
+ background-color: black; color: white; border-radius: 10px; 
+}
+#title { position: absolute; top: 4%; right: 3%; left: 3%; height: 80px; 
+ background-color: darkslateblue; color: lightsteelblue; font: normal 38pt 'century gothic'; 
+ align-content: center; text-align: center; border-radius: 10px; letter-spacing: 6px; 
+}
+.content { position: absolute; left: 80px; top: 160px; }
+.content a { color: powderblue; text-decoration: none; font-size: 20pt;  }
+.content h3 { margin-bottom: 14px; font: normal 20pt 'californian fb'; letter-spacing: 2px;  }
 </style>
 <script>
 
 </script>
 </head>
 <body>
-<h1>Walking &#128694; Main Page</h1>
+<h1 id="title">Walking &#128694; Main Page</h1>
+<div class="content">
 <h3><a href="..\index.html">Home</a></h3>
 <h3><a href="physics.html">Physics</a> Main Page</h3>
 <h3><a href="kinesiology.html">Kinesiology</a> Main Page</h3>
@@ -21,7 +33,10 @@
 <h3><a href="walking.html">Steps</a></h3>
 <h3><a href="..\svg\svg-test.html">SVG Test</a></h3>
 <h2>The Art of Walking</h2>
+
+</div>
 </body>
+
 </html>
 
 
