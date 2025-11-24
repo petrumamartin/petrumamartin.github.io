@@ -19,16 +19,18 @@ purpose: provide a forum for reviewing books.
 	<script src="controller.js"></script>
 <style>
 html {background-color: powderblue; }
-body {background-color: snow; }
-#main {text-decoration-line: none;font-size: 1.2em;}
+body {background-color: black; }
+.content { position: absolute; left: 40px; top: 120px; color: white; }
+#links { list-style-type: none; font-size: 14pt; text-decoration: none; color: white; }
 
-#bookreviews {font-size: 1.2em; }
+#bookreviews {font-size: 1.2em; list-style-type: none; }
+#bookreviews li { margin-bottom: 10px; }
 #bookreviews a {text-decoration-line: none;}
-#bookreviews a:link {color:fuchsia;}
-#bookreviews a:visited{color: green;}
+#bookreviews a:link {color:plum;}
+#bookreviews a:visited{color: mintcream;}
 #bookreviews a:hover {color: red;}
 
-.separator {color:indigo;}
+.separator {color:white;}
 
 
 </style>
@@ -38,7 +40,8 @@ body {background-color: snow; }
 </head>
 <body>
 <nav></nav>
-<a id="main" href="super.html">Home</a>
+<div class="content">
+<a id="links" href="super.html">Home</a>
 
 <h2>Book Reviews</h2>
 <ul id="bookreviews">
@@ -49,7 +52,7 @@ body {background-color: snow; }
 	<li><a href="book-reviews\silent-spring_rachel-carson.html">Silent Spring<span class="separator"> by </span>Rachel Carson</a></li>
 	<li><a href="book-reviews\lord-jim_joseph-conrad.html">Lord Jim<span class="separator"> by </span>Joseph Conrad</a></li>
 </ul>
-
+</div>
 </body>
 </html>
 
