@@ -1,7 +1,19 @@
+html {
+ background-color: navy;
+}
 body {
-    margin: 50px 60px 50px 100px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
     border: 1px solid black;
     border-radius: 20px;
-    padding: 20px;
-    height: 800px;
+    background-color: darkred;
+}
+nav {
+ position: absolute;
+ top: 5%;
+ right: 2%;
+ left: 2%; 
 }
