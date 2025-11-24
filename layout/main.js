@@ -6,11 +6,12 @@
 */
 
 
-let navOpen, navClose, navLinks, navFlag;
+let navOpen, navClose, navLinks, navAchor, navFlag;
 function nav() {
  navOpen = document.querySelector("#open");
  navClose = document.querySelector("#close");
  navLinks = document.querySelector("#links");
+ navAchor = document.querySelector("#links a");
 
  navClose.style.visibility = "hidden";
  navLinks.style.visibility = "hidden";
@@ -33,7 +34,11 @@ function nav() {
    navFlag = false;
   }
  });
-
+/*
+ navAchor.addEventListener('mouseover', ()=>{
+  navAchor
+ });
+*/
 }
 
 
