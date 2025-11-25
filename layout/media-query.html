@@ -9,13 +9,38 @@
  <head>
   <title>Media Query</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
   <style>
    * { margin: 0px; padding: 0px; }
-   html { background-color: navy; }
-   body { position: absolute; top: 5%; right: 5%; bottom: 5%; left: 5%;
+   html { background-color: rebeccapurple; }
+   body { position: absolute; top: 5%; right: 5%; bottom: 5%; left: 5%; height: 800px;
     background-color: black; color: white;
    }
-   a { color: white; text-decoration: none; font-size: 14pt; }
+   h1#title {position:absolute;top:1%;right:2%;left:2%;height:40px;
+    background-color: darkred; color: lavenderblush; font: normal 18pt 'eras itc'; text-align:center;align-content:center;letter-spacing:3px;word-spacing:5px;
+   }
+   a { position: absolute; left:20px; top: 50px; color: white; text-decoration: none; font-size: 14pt; }
+   .sa { position: absolute; }
+   h3.at {position:absolute;top:3%;right:3%;left:3%;text-align:center;align-content:center;font:normal 14pt 'eras itc';}
+   #a2s1_t {color:mistyrose;font-style:italic;}
+
+
+   @media screen and (max-width: 1000px) {
+    #s1,#s2{right:10%;left:10%;width:80%;height:309px;background-color:darkblue;} #s1{top:80px;} #s2{top:424px;}
+    #a1s1,#a2s1,#a3s1,#a4s1,#a1s2,#a2s2,#a3s2,#a4s2{width:48.5%;height:150px;background-color:darkred;}
+    #a1s1{left:1%;top:3px;} #a2s1{right:1%;top:3px;} #a3s1{left:1%;top:156px;} #a4s1{right:1%;top:156px;}
+    #a1s2{left:1%;top:3px;} #a2s2{right:1%;top:3px;} #a3s2{left:1%;top:156px;} #a4s2{right:1%;top:156px;}
+
+   }
+   @media screen and (min-width: 1000px) and (max-width: 1200px) {
+    
+
+   }
+   @media screen and (min-width: 1200px) and (max-width: 1400px) {
+    
+
+   }
   </style>
   <script>
 
@@ -27,6 +52,22 @@
  <body>
   <h1 id="title">Media Query</h1>
   <a href="layout.html">Layout</a>
+  <section class="sa" id="s1">
+   <article class="sa" id="a1s1">
+    <h3 class="at" id="a1s1_t">Example One</h3>
+   </article>
+   <article class="sa" id="a2s1">
+    <h3 class="at" id="a2s1_t">Example Two</h3>
+   </article>
+   <article class="sa" id="a3s1"></article>
+   <artcile class="sa" id="a4s1"></artcile>
+  </section>
+  <section class="sa" id="s2">
+   <article class="sa" id="a1s2"></article>
+   <article class="sa" id="a2s2"></article>
+   <article class="sa" id="a3s2"></article>
+   <article class="sa" id="a4s2"></article>
+  </section>
  </body>
  <script>
   main();
