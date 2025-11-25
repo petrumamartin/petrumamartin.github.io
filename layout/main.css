@@ -24,7 +24,7 @@ nav { position: absolute; left: 20px; top: 30px;
 
 /* --------------------====  RESPONSIVE CODE  ====-------------------- */
 
-@media screen and (max-width: 599px) { 
+@media screen and (max-width: 600px) { 
  header { top: 40px;
   background-color: midnightblue; text-align: center; align-content: center; 
  }
